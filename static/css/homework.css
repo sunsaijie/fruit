@@ -1,0 +1,141 @@
+/*清除页面的默认样式*/
+
+body,h2,p{
+	margin:0;
+}
+
+
+/*外部容器的样式*/
+
+#container{
+	width: 990px;
+	margin: 0 auto;
+}
+
+
+/*标题的样式*/
+
+#container h2{
+
+	font-weight: normal;
+	color:#999;
+	border-bottom: 1px solid #ccc;
+	margin-top: 20px;
+	padding-bottom:20px;
+	margin-bottom: 20px;
+}
+
+/*左列模块*/
+
+.left{
+	float:left;
+	position:relative;
+}
+
+.left a{
+	position:absolute;
+	top:330px;
+	left:205px;
+	width: 100px;
+	height: 40px;
+	border: 1px solid #64a131;
+	border-radius: 5px;
+	color:#64a131;
+}
+
+.right{
+	margin-top: 70px;
+	margin-right: 40px;
+	float:right;
+}
+
+
+
+
+/*表单样式*/
+
+/*文本*/
+
+.right p {
+
+	margin-top:20px;
+	height: 40px;
+}
+
+.right .spanText{
+	float:left;
+	width: 64px;
+	height: 40px;
+	text-align: right;
+	line-height: 40px;
+	color:#999;
+	margin-right: 30px;
+
+
+}
+
+/*输入框*/
+.right .uText{
+	width: 300px;
+	box-sizing: border-box;
+	height: 40px;
+	border: 1px solid #ccc;
+	outline:none;
+	font-size:16px;
+	color:#555;
+	padding:0 12px;
+
+
+}
+
+
+.right .isSaved input{
+	height: 18px;
+	width: 18px;
+	/*行内块元素与左右文本的对齐方式*/
+	vertical-align: middle;
+
+}
+
+
+.right .isSaved{
+		/*margin-left: 90.5px;*/
+		color:#999;
+}
+
+.right .forget{
+
+	float:right;
+}
+
+.forget a{
+	color:#999;
+
+}
+
+.login,.regist{
+
+	width: 145px;
+	height: 39px;
+	border:1px solid #64a131;
+	border-radius: 5px;
+	font-size:18px;
+	color:#7bae55;
+	background-color: #f5ffed;
+	line-height: 39px;
+}
+
+.login{
+
+	color:white;
+	background-color:#64a131;
+	/*margin-left: 90px; */
+	margin-right: 14px;
+}
+
+
+
+
+
+
+

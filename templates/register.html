@@ -1,0 +1,56 @@
+{% extends "login.html" %}
+
+{% block title %}
+    注册会员
+{% endblock %}
+
+{% block button%}
+    注册会员
+{% endblock %}
+
+{% block form%}
+
+
+<form action="" method="post">
+        {% csrf_token %}
+        <p>
+            <span class='spanText'>手机号</span>
+            <input type="text" name = 'uphone' class= 'uText' id='uphone'>
+            <br>
+            <span id="uphone-show" style="color: red;"></span>
+        </p>
+
+        <p>
+            <span class='spanText'>密码</span>
+            <input type="password" name='upwd' class = 'uText' placeholder="请输入6-20位号码字符" id="upwd">
+            <br>
+            <span id="upwd-show"></span>
+        </p>
+
+        <p>
+            <span class='spanText'>确认密码</span>
+            <input type="password" name='uspwd' class = 'uText' placeholder="请输入6-20位号码字符">
+        </p>
+
+        <p>
+            <span class='spanText'>用户名</span>
+            <input type="text" name = 'uname' class= 'uText'>
+        </p>
+
+        <p>
+            <span class='spanText'>邮箱</span>
+            <input type="text" name = 'email' class= 'uText'>
+        </p>
+        <p>
+            <span class='spanText'></span>
+            <input type="submit" name='login' class='login'>
+
+            <input type="button" name="regist" class='regist' value='注册会员'>
+
+        </p>
+</form>
+<script src="/static/jq/jquery-1.11.3.js"></script>
+<script src="/static/jq/jquery.cookie.js"></script>
+<script src="/static/js/register.js"></script>
+{% endblock %}
+
