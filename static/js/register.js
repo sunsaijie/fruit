@@ -3,7 +3,7 @@
 /*
 DOM树加载完成后需要做的事情
 包含初始化的行为操作 如 :事件的绑定
- */ 
+ */
 
 $(function(){
 	// 为手机号码框绑定失去焦点检测事件
@@ -11,7 +11,15 @@ $(function(){
 
 	// 为密码框绑定失去焦点检测时间
 	$("#upwd").blur(isPassword);
+
+	console.log($('#uemail'));
+	// 绑定邮箱检测
+	// 为#frm_register 绑定submit 事件
+	$('#frm_register').submit(function(){
+		return checkEmail()&&isPhone()&&isPassword();
+	});
 })
+
 
 
 
@@ -74,3 +82,21 @@ function isPassword(){
 
 
 }
+
+function checkEmail(){
+	var uemail = $("#uemail").val();
+	var $show = $("#uemail-show");
+	if(uemail!== ""){
+		$show.html('邮箱不能为空')
+		return false;
+	}else if(/\d+@\d+\.\d/.test(uemail)){
+		$show.html('请输入正确的游戏格式')
+		return false;
+	}else{
+		$show.html('通过');
+		return true;
+	}
+}
+
+
+

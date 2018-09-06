@@ -11,7 +11,7 @@
 {% block form%}
 
 
-<form action="" method="post">
+<form action="/cetirfr" method="post" id="frm_register">
         {% csrf_token %}
         <p>
             <span class='spanText'>手机号</span>
@@ -39,7 +39,9 @@
 
         <p>
             <span class='spanText'>邮箱</span>
-            <input type="text" name = 'email' class= 'uText'>
+            <input type="text" name = 'email' class= 'uText' id="uemail">
+            <br>
+            <span id="email-show"></span>
         </p>
         <p>
             <span class='spanText'></span>
