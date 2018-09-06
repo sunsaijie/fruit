@@ -125,3 +125,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
+
+
+
+# 设置sessionID的存活时间为30分钟，设置关闭浏览器则清空对应的session
+
+SESSION_COOKIE_AGE = 60*30
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True

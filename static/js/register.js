@@ -12,7 +12,9 @@ $(function(){
 	// 为密码框绑定失去焦点检测时间
 	$("#upwd").blur(isPassword);
 
-	console.log($('#uemail'));
+	$("#uemail").blur(function(){
+		checkEmail();
+	})
 	// 绑定邮箱检测
 	// 为#frm_register 绑定submit 事件
 	$('#frm_register').submit(function(){
@@ -86,6 +88,7 @@ function isPassword(){
 function checkEmail(){
 	var uemail = $("#uemail").val();
 	var $show = $("#uemail-show");
+	console.log(uemail)
 	if(uemail!== ""){
 		$show.html('邮箱不能为空')
 		return false;

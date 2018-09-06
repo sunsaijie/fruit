@@ -19,8 +19,8 @@
 			
 		<div class="right" {% block right_style%}{%endblock%}>
 			{% block form %}
-			<form action="login" method='post'>
-
+			<form action="/login/" method='post'>
+				{% csrf_token %}
 				<p>
 					<span class='spanText'>手机号</span>
 					<input type="text" name = 'uphone' class= 'uText'>
